@@ -1,0 +1,60 @@
+{
+  "Name": "mqtt_publisher",
+  "Description": "add your module description here",
+  "Version": "1.0",
+  "Language": "Python",
+  "Components": {
+    "BusClient": {
+      "type": "AzureIoTEdge",
+      "version": "1.0",
+      "dynamicLoad": true,
+      "Config": {
+        "InputEndPoints":[
+          "DataIn",
+          "ConfigIn",
+          "RequestIn",
+          "ResponseIn"
+        ]
+      }
+    },
+    "Logger": {
+      "type": "plog",
+      "version": "1.1.4",
+      "dynamicLoad": false,
+      "Config": {
+        "logFilesPath":"data",
+        "maxSeverity": "DEBUG",
+        "maxFileSize": 1000000,
+        "maxNumFiles": 10
+      }
+    }
+  },
+  "Config": {
+    "PipeDiameter":3.5,
+    "IOConfig":{
+      "oil-velocity":{
+        "data_type": 8,
+        "io_id": 1
+      },
+      "gas-velocity":{
+          "data_type": 8,
+          "io_id": 2
+      },
+      "water-velocity":{
+          "data_type": 8,
+          "io_id": 3
+      }
+    }
+  },
+  "InEndpoints": {
+    "Data": "DataIn"
+  },
+  "OutEndpoints":{
+    "Data": "DataOut"
+  },
+  "Methods":[
+    "TestMethod1",
+    "TestMethod2",
+    "TestMethod3"
+  ]
+}

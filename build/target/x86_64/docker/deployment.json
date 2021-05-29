@@ -1,0 +1,12 @@
+{
+  "properties.desired": {},
+  "env": {},
+  "createOptions": {},
+    "Routes":
+     [
+       {
+         "fromEndpoint":"DataOut",
+         "toModule":"{add destination module here}"
+       }
+     ]
+}
