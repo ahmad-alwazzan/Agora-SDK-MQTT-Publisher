@@ -1,4 +1,5 @@
-# Welcome to Agora Edge SDK
+# Agora-SDK-MQTT-Publisher
+This module is developed by 'KNPC TEAM A'. to build the module with Agora Edge SDK follow the instructions below.
 
 ###### Build and debug your module
 Module directory structure:
@@ -11,28 +12,8 @@ Module directory structure:
 
 Build your module code:
 
-Build your code using VSCode build task:
-```
-CTL+SHIFT+P and Enter
->Tasks: Run Task
-Run the build task
-```
-
-Build your module code from the command line:
-```
-cd build
-./build-x86_64.sh
-```
-
-Build your module code from the command line and run unit test:
-```
-cd build
-./build-x86_64.sh -u
-```
-
 Build your module container image:
 ```
 cd build/target/x86_64/docker
 ./build-module.sh -r {registry URL} -t {image tag name}
 ```
-# Agora-SDK-MQTT-Publisher
